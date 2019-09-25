@@ -1,0 +1,16 @@
+
+Get the list of servers in cluster
+couchbase-cli server-list -c localhost:8091 --username Administrator --password MyPass123
+
+Cluster initilaization
+couchbase-cli cluster-init -c localhost:8091 --cluster-username Administrator --cluster-password MyPass123 --services data,index,query --cluster-ramsize 512 --cluster-index-ramsize 256
+
+Get the list of buckets
+couchbase-cli bucket-list -c localhost -u Administrator -p password
+odes
+REmove the active node and rablance the cluster with other n
+couchbase-cli rebalance --cluster=127.0.0.1:8091 -u Administrator -p MyPass123 --server-remove=192.168.0.106
+
+ Reset admin password
+couchbase-cli reset-admin-password --new-password new_pwd
+
